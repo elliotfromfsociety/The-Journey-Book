@@ -1,0 +1,22 @@
+// When a variable is declared as static, space for it gets allocated for the lifetime of the program. Even if the function is called multiple times, space for the static variable is allocated only once and the value of variable in the previous call gets carried through the next function call.
+
+bool isPrime(int n)
+{
+	static int i = 2; // declared static so we don't have to pass it and also the value of i will be carry forward in each recursive iteration that why we are checking prime with this i value
+
+	// corner cases
+	if (n == 0 || n == 1) {
+		return false;
+	}
+
+	// Checking Prime
+	if (n == i)
+		return true;
+
+	// base cases
+	if (n % i == 0) {
+		return false;
+	}
+	i++;
+	return isPrime(n);
+}

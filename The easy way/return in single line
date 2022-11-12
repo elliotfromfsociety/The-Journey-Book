@@ -1,0 +1,14 @@
+isPrime(11) ? cout << " true\n" : cout << " false\n";
+
+or
+
+isPrime(11) ? return true : return false;
+
+or
+
+if(n==temp) ? return true : return false;
+
+basically 
+
+some conditon ? if true what to do : if false what to do
+
